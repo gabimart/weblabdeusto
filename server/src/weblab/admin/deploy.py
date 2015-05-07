@@ -69,6 +69,14 @@ CONFIG_JS = {
         "experiment.info.description": "description",
         "experiment.picture": "/img/experiments/aquarium.png"
     },
+    "aquariumg@Aquatic experiments": {
+        "height": 1000,
+        "width": 1024,
+        "html.file": "jslabs/aquariumg/aquarium.html",
+        "experiment.info.link": "http://weblabdeusto.readthedocs.org/en/latest/sample_labs.html#aquarium",
+        "experiment.info.description": "description",
+        "experiment.picture": "/img/experiments/aquarium.png"
+    },
     "archimedes@Aquatic experiments": {
         "html.file": "jslabs/archimedes/archimedes.html",
         "cssHeight": "1000",
@@ -672,6 +680,7 @@ def populate_weblab_tests(engine, tests):
     # Please keep alphabetical order :-)
     all_experiments = _create_experiments(session, {
         ('aquarium',                'Aquatic experiments')   : 'aquarium',
+        ('aquariumg',               'Aquatic experiments')   : 'js',
         ('aquariumjs',              'Aquatic experiments')   : 'js',
         ('archimedes',              'Aquatic experiments')   : 'js',
         ('binary',                  'Games')                 : 'binary',
@@ -755,6 +764,7 @@ def populate_weblab_tests(engine, tests):
         ('archimedes', 'archimedes',              'Aquatic experiments',   1400),
 
         ('any',        'aquarium',                'Aquatic experiments',    200),
+        ('any',        'aquariumg',               'Aquatic experiments',    200),
         ('any',        'aquariumjs',              'Aquatic experiments',    200),
         ('any',        'binary',                  'Games',                  200),
         ('any',        'blink-led',               'LabVIEW experiments',    200),

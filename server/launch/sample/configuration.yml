@@ -123,6 +123,10 @@ hosts:
             config_file: main_machine/main_instance/experiment_aquarium/server_config.py
             type: experiment
             class: experiments.aquarium.Aquarium
+          experiment_aquariumg2:
+            config_file: main_machine/main_instance/experiment_aquariumg/server_config.py
+            type: experiment
+            class: experiments.aquariumjs.Aquarium
           experiment_aquariumjs:
             config_file: main_machine/main_instance/experiment_aquariumjs/server_config.py
             type: experiment
@@ -163,3 +167,16 @@ hosts:
             config_file: main_machine/main_instance/experiment_romie/server_config.py
             type: experiment
             class: experiments.romie.romie.RoMIExperiment
+
+  aquariumg_host:
+    host: 127.0.0.1
+    processes:
+      exp_instance:
+        components:
+          experiment_aquariumg:
+            class: experiments.dummy.DummyExperiment
+            config_file: main_machine/main_instance/experiment_aquariumg/server_config.py
+            protocols:
+              port: 20000
+              supports: xmlrpc
+            type: experiment
